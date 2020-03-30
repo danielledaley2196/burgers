@@ -15,8 +15,8 @@ router.get("/", function(req, res) {
   });
 });
 
-router.push("/api/burgers", function(req, res) {
-  burger.creat(["name"], [req.body.name], function(reslt) {
+router.post("/api/burgers", function(req, res) {
+  burger.create(["name"], [req.body.name], function(reslt) {
     res.json({ id: result.insertId });
   });
 });
