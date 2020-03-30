@@ -1,3 +1,31 @@
-create the temolate for the layout
+<h1>Burger List</h1>
 
-don't forget the button!!!
+<h2>Burger Menu</h2>
+
+<ul>
+    {{#each burger}}
+    {{#unless devoured}}
+    {{put something here}}
+    {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Devoured Burgers</h2>
+
+<ul>
+    {{#each burger}}
+    {{#if devoured}}
+    {{put something here}}
+    {{/if}}
+    {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+    <div class="form-group">
+        <label for="burger">Burger Name:</label>
+        <input type="text" id="burger" name="name">
+    </div>
+    <button type="submit">Add Cat</button>
+</form>
